@@ -1,0 +1,6 @@
+CREATE TABLE temperature_record (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    temperature DOUBLE NOT NULL,
+    state VARCHAR(10) NOT NULL,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

@@ -1,0 +1,17 @@
+services:
+    backend:
+        image: tempmatch
+        container_name: tempmatch
+        build:
+            context: ./tempmatch
+        ports:
+            - "8080:8080"
+    frontend:
+        image: sensor-app
+        container_name: sensor-app
+        build:
+            context: ./sensor-app
+        ports:
+            - "80:4200"
+        depends_on:
+            - backend
